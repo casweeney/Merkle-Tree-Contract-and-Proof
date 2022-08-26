@@ -29,7 +29,7 @@ describe("Check if merkle root is working", function () {
 
     const merkleTree = new MerkleTree(list, keccak256, {
       hashLeaves: true,
-      sortPairs: true,
+      sortPairs: true, // this makes the leafs even (2 ** n)
     });
 
     const root = merkleTree.getHexRoot();
